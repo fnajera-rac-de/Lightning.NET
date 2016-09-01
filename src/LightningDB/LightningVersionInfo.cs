@@ -8,7 +8,10 @@ namespace LightningDB
     /// </summary>
     public class LightningVersionInfo
     {
-        internal static LightningVersionInfo Get()
+        /// <summary>
+        /// Represents lmdb version information
+        /// </summary>
+        public static LightningVersionInfo Get()
         {
             int minor, major, patch;
             var version = mdb_version(out major, out minor, out patch);
